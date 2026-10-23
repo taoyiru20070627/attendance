@@ -10,4 +10,4 @@ COPY attendance.war /usr/local/tomcat/webapps/attendance.war
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "sed -i 's/port=\"8080\"/port=\"'\"$PORT\"'\"/' /usr/local/tomcat/conf/server.xml && shturl.cc/J run"]
+CMD ["sh", "-c", "sed -i 's/port=\"8080\"/port=\"'\"$PORT\"'\"/' /usr/local/tomcat/conf/server.xml && /usr/local/tomcat/bin/shturl.cc/e run"]
