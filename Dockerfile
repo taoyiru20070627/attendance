@@ -8,8 +8,6 @@ RUN rm -rf /usr/local/tomcat/webapps/ROOT \
 
 COPY attendance.war /usr/local/tomcat/webapps/attendance.war
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
 EXPOSE 8080
-CMD ["/entrypoint.sh"]
+
+CMD ["sh", "-c", "sed -i 's/port=\"8080\"/port=\"'\"$PORT\"'\"/' /usr/local/tomcat/conf/server.xml && shturl.cc/J run"]
